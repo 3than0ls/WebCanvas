@@ -16,7 +16,7 @@ function init() {
     preload.on("fileload", fileLoaded);
     preload.loadFile("images/dab.png");
   };
-  loadImage();  // In order to find the bounds of a bitmap, we must first load it
+  loadImage();  // In order to find the bounds of a bitmap, we must first load it.
 
   function animate(target) {
     createjs.Tween.get(target, { loop: true })
