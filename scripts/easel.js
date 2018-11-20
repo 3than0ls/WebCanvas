@@ -20,8 +20,11 @@ function init() {
 
   function animate(target) {
     createjs.Tween.get(target, { loop: true })
-      .to({ x: 1000, rotation: 360, alpha: 0.3 }, 2500, createjs.Ease.getPowInOut(4))
-      .to({ x: 300, rotation: 0, alpha: 1 }, 2500, createjs.Ease.getPowInOut(4));
+      .to({ scale: 0 }, 0, createjs.Ease.getPowInOut(4))
+      .to({ scale: 1 }, 3500, createjs.Ease.getPowInOut(4))
+      .to({ scale: 0.5 }, 1500, createjs.Ease.getPowInOut(4))
+      .to({ scale: 1 }, 3500, createjs.Ease.getPowInOut(4))
+      .to({ scale: 0 }, 3500, createjs.Ease.getPowInOut(4));
   };
   animate(dab);
 
