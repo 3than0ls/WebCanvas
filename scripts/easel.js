@@ -22,13 +22,14 @@ function init() {
     createjs.Tween.get(target, { loop: true })
       .to({ scale: 0 }, 0, createjs.Ease.getPowInOut(4))
       .to({ scale: 1 }, 3500, createjs.Ease.getPowInOut(4))
-      .to({ scale: 0.5 }, 1500, createjs.Ease.getPowInOut(4))
+      .to({ scale: 0.5 }, 500, createjs.Ease.getPowInOut(4))
       .to({ scale: 1 }, 3500, createjs.Ease.getPowInOut(4))
       .to({ scale: 0 }, 3500, createjs.Ease.getPowInOut(4));
   };
+  
   animate(dab);
 
-  createjs.Ticker.frameraate = 60;
+  createjs.Ticker.framerate = 60;
   createjs.Ticker.addEventListener("tick", stage); 
 
 
