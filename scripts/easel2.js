@@ -14,7 +14,7 @@ function init() {
     ];
     function animate(target, origin) {
         createjs.Tween.get(target, { loop: true })
-          .to({ rotation: 720*Math.random(), x: 1650 + origin }, 4500, createjs.Ease.getPowInOut(3))
+          .to({ rotation: 360*Math.random(), x: 1650 + origin }, 4500, createjs.Ease.getPowInOut(3))
           .to({ rotation: 0, x: origin }, 4500, createjs.Ease.getPowInOut(3));
     };
     for(var letter = 0; letter < despacito.length; letter++) {
