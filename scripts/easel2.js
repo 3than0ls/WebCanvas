@@ -14,12 +14,13 @@ function init() {
     ];
     function animate(target, origin) {
         createjs.Tween.get(target, { loop: true })
-          .to({ x: 2450+origin }, 3500, createjs.Ease.getPowInOut(3));
+          .to({ rotation: 720, x: 1650+origin }, 4500, createjs.Ease.getPowInOut(3))
+          .to({ rotation: 0, x: origin }, 4500, createjs.Ease.getPowInOut(3));
     };
     for(var letter = 0; letter < despacito.length; letter++) {
         despacito[letter].y = 400;
-        despacito[letter].x = letter * 30 - 350;
-        animate(despacito[letter], letter * 30 - 350);
+        despacito[letter].x = letter * 30;
+        animate(despacito[letter], letter * 30);
         stage.addChild(despacito[letter]);
     }
     createjs.Ticker.framerate = 60;
